@@ -154,7 +154,7 @@ const Dashboard = () => {
   return (
     <div className="dashboard">
       <header>
-        <h1>Home Monitoring Dashboard</h1>
+        <h1>HVAC Dashboard</h1>
         <div className="connection-status">
           <div className={`status-indicator ${isConnected ? 'connected' : 'disconnected'}`}></div>
           <span>{isConnected ? 'Connected to Firebase' : 'Disconnected'}</span>
@@ -186,7 +186,7 @@ const Dashboard = () => {
       
       <div className="sensors-container">
         <div className="sensor-card">
-          <h2>Gas</h2>
+          <h2>Co2</h2>
           <div className={`sensor-value ${sensorData.gas === 1 ? 'alert-value' : ''}`}>
             {sensorData.gas}
           </div>
@@ -302,10 +302,10 @@ const Dashboard = () => {
         </div>
       )}
       
-      <div className="debug-section">
+      {/* <div className="debug-section">
         <h3>Current Sensor Values (Debug)</h3>
         <pre>{JSON.stringify(sensorData, null, 2)}</pre>
-      </div>
+      </div> */}
       
       <style jsx>{`
         /* Dashboard Styles */
